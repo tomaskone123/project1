@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/03 19:29:05 by tomas            ###   ########.fr       */
+/*   Created: 2024/04/03 19:19:34 by tomas             #+#    #+#             */
+/*   Updated: 2024/04/03 19:21:00 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include "libft.h"
-#include <stdio.h>
 
-int	main(void)
+void *memset(void *s, int c, size_t n)
 {
-	char	c[50] = "Hello world";
-
-	memset(c, 'd', 8*sizeof(char));
-	printf("%s\n", c);
-	return 0;
+	
 }

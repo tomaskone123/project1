@@ -10,7 +10,7 @@ SOURCES = \
 OBJECTS = $(SOURCES:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
-CC = CC
+CC = cc
 all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(AR) -r $(NAME) $?
