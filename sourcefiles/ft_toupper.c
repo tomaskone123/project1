@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/04 19:53:33 by tomas            ###   ########.fr       */
+/*   Created: 2024/04/04 13:20:50 by tomas             #+#    #+#             */
+/*   Updated: 2024/04/04 13:30:05 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
 
-int	main(void)
+int ft_toupper(int c)
 {
-	char	c[50] = "Hello world";
-	char	d = 'D';
-
-	// memset(c, 'd', 8*sizeof(char));
-	printf("%c\n", ft_tolower(d));
-	return 0;
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }
+

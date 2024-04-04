@@ -6,6 +6,9 @@ SOURCES = \
 	ft_isdigit.c \
 	ft_isprint.c \
 	ft_strlen.c \
+	ft_toupper.c \
+	ft_tolower.c \
+
 
 OBJECTS = $(SOURCES:.c=.o)
 
@@ -14,6 +17,7 @@ CC = cc
 all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(AR) -r $(NAME) $?
+	chmod 777 $(NAME)
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
 clean:
