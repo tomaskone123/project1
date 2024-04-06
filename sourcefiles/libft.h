@@ -10,7 +10,7 @@ int	ft_isprint(int c);
 int ft_tolower(int c);
 int ft_toupper(int c);
 char *ft_strchr(const char *s, int c);
-void *memset(void *s, int c, size_t n);
+void *ft_memset(void *s, int c, size_t n);
 size_t ft_strlen(const char *s);
 
 #endif
