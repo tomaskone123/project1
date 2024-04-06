@@ -9,13 +9,14 @@ SOURCES = \
 	ft_toupper.c \
 	ft_tolower.c \
 	ft_strchr.c \
+	ft_memset.c \
 
 
 OBJECTS = $(SOURCES:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
 CC = cc
-perms: all
+perms:
 	chmod 777 $(SOURCES)
 all: $(NAME)
 $(NAME): $(OBJECTS)

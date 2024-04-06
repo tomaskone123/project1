@@ -6,20 +6,22 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/04 20:31:58 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/06 17:31:41 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 int	main(void)
 {
-	// char	c[50] = "Hello world";
-	char	d = 'D';
+	const char	c[50] = "hello world";
+	char	d = 'a';
 
 	// memset(c, 'd', 8*sizeof(char));
-	printf("%c\n", ft_tolower(d));
+	// printf("%c\n", ft_tolower(d));
+	printf("%s\n", ft_strchr(c, d));
 	return 0;
 }
