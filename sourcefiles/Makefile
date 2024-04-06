@@ -8,12 +8,15 @@ SOURCES = \
 	ft_strlen.c \
 	ft_toupper.c \
 	ft_tolower.c \
+	ft_strchr.c \
 
 
 OBJECTS = $(SOURCES:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
 CC = cc
+perms: all
+	chmod 777 $(SOURCES)
 all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(AR) -r $(NAME) $?
