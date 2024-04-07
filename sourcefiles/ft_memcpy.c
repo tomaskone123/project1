@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/07 13:00:49 by tomas            ###   ########.fr       */
+/*   Created: 2024/04/07 12:48:06 by tomas             #+#    #+#             */
+/*   Updated: 2024/04/07 12:59:30 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
 #include <string.h>
 
-int	main(void)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	c[50] = "hello world";
-	char	d[] = "world";
+	char* pDest;
+	const char* pSrc;
 
-	// ft_bzero(c + 3, 5);
-	// memset(c, 'd', 8*sizeof(char));
-	// printf("%c\n", ft_tolower(d));
-	// printf("%s\n", ft_strchr(c, d));
-	ft_memcpy(c, d, 1);
-	printf("%s\n", c);
-	return 0;
+	pDest = dest;
+	pSrc = src;
+	while (*pSrc && n != 0)
+	{
+		*(pDest++) = *pSrc++;
+		n--;
+	}
+	return (dest);
 }
