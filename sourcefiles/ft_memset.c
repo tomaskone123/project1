@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 19:19:34 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/06 19:19:29 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/07 12:26:02 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,4 @@ void *ft_memset(void *s, int c, size_t n)
 		i++;
 	}
 	return (s);
-}
-
-int main(void)
-{
-	char str[] = "Hello, World!";
-	ft_memset(str, 'x', 2);
-	printf("%s\n", str);
 }
