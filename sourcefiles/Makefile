@@ -10,6 +10,7 @@ SOURCES = \
 	ft_tolower.c \
 	ft_strchr.c \
 	ft_memset.c \
+	ft_bzero.c \
 
 
 OBJECTS = $(SOURCES:.c=.o)
