@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/08 17:20:44 by tomas            ###   ########.fr       */
+/*   Created: 2024/04/08 16:47:23 by tomas             #+#    #+#             */
+/*   Updated: 2024/04/08 17:18:44 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
-#include <stdlib.h>
 
-int	main(void)
+int ft_atoi(const char *nptr)
 {
-	// const char	*c = "hello world";
-	const char	*d = " \t -8294  9";
-	// int c = (char*) d;
-	printf("%d\n", ft_atoi(d));
-	return 0;
+	int	sign;
+	int n;
+
+	sign = 1;
+	n = 0;
+	while (((*nptr >= 9 && *nptr <= 13) || *nptr == ' ') && *nptr)
+		nptr++;
+	if (*nptr == '-')
+	{
+		sign *= -1;
+		nptr++;
+	}
+	else if (*nptr == '+')
+		nptr++;
+	while ((*nptr >= '0') && (*nptr <= '9'))
+	{
+		n = n * 10 + (*nptr - '0');
+		nptr++;
+	}
+	return (n * sign);
 }
+

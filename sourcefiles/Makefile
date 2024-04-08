@@ -15,6 +15,7 @@ SOURCES = \
 	ft_strrchr.c \
 	ft_strncmp.c \
 	ft_strnstr.c \
+	ft_atoi.c \
 	ft_memcpy.c \
 
 

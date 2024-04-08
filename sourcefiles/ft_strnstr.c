@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:21:50 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/08 15:58:44 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/08 16:00:27 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,3 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-// int main(void)
-// {
-// 	const char *s1 = "Hello world";
-// 	const char *s2 = "Hello ";
-// 	printf("%s\n", ft_strnstr(s1, s2, 13));
-// 	return (0);
-// }
