@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/08 14:54:39 by tomas            ###   ########.fr       */
+/*   Created: 2024/04/08 13:54:23 by tomas             #+#    #+#             */
+/*   Updated: 2024/04/08 14:52:51 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
+// #include "libft.h"
 #include <string.h>
+#include <stdio.h>
 
-int	main(void)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	const char	c[50] = "hello world";
-	const char	*d = "hello world";
-
-	printf("%d\n", ft_strncmp(c, d, 6));
-	return 0;
+	while (*s1 && (n != 0))
+	{
+		n--;
+		if (*s1 == *s2)
+		{
+			s1++;
+			s2++;
+		}
+		else
+			return (*s1 - *s2);
+	}
+	return (*s1 - *s2);
 }
+
