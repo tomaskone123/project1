@@ -10,9 +10,12 @@ SOURCES = \
 	ft_tolower.c \
 	ft_strchr.c \
 	ft_memset.c \
+	ft_strlcpy.c \
 	ft_bzero.c \
+	ft_strrchr.c \
 	ft_memcpy.c \
-	
+
+
 
 
 OBJECTS = $(SOURCES:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/07 13:00:49 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/08 13:46:57 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,10 @@
 
 int	main(void)
 {
-	char	c[50] = "hello world";
-	char	d[] = "world";
+	const char	c[50] = "hello world";
+	char	d = ' ';
 
-	// ft_bzero(c + 3, 5);
-	// memset(c, 'd', 8*sizeof(char));
-	// printf("%c\n", ft_tolower(d));
-	// printf("%s\n", ft_strchr(c, d));
-	ft_memcpy(c, d, 1);
-	printf("%s\n", c);
+	// strrchr(c, 'l');
+	printf("%s\n", ft_strrchr(c, d));
 	return 0;
 }

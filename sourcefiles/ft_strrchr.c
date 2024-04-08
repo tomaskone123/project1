@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/07 12:48:06 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/07 14:29:57 by tomas            ###   ########.fr       */
+/*   Created: 2024/04/08 13:09:36 by tomas             #+#    #+#             */
+/*   Updated: 2024/04/08 13:46:10 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
+#include <stdio.h>
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+char *ft_strrchr(const char *s, int c)
 {
-	char* pDest;
-	const char* pSrc;
+	const char	*pS;
+	int		i;
 
-	pDest = dest;
-	pSrc = src;
-	if (!dest && !src)
+	i = 0;
+	pS = s;
+	if (c == 0)
 		return (NULL);
-	while (*pSrc && n != 0)
+	while (*s)
 	{
-		*(pDest++) = *pSrc++;
-		n--;
+		if (*s == c)
+			i++;
+		s++;
 	}
-	return (dest);
+	while (i >= 0)
+	{
+		if ((*pS == c) && (i > 0))
+			--i;
+		if (i == 0)
+			return ((char *)pS);
+		pS++;
+	}
+	return (NULL);
 }
