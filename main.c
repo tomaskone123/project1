@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/08 14:54:39 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/08 15:47:41 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 
 int	main(void)
 {
-	const char	c[50] = "hello world";
-	const char	*d = "hello world";
+	const char	*c = "hello world";
+	const char	*d = " wo";
 
-	printf("%d\n", ft_strncmp(c, d, 6));
+	printf("%s\n", ft_strnstr(c, d, 3));
 	return 0;
 }
