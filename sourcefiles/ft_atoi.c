@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 16:47:23 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/08 17:18:44 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/08 17:43:00 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 int ft_atoi(const char *nptr)
 {
-	int	sign;
-	int n;
+	int			sign;
+	int			n;
 
 	sign = 1;
 	n = 0;

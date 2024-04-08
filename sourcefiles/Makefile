@@ -31,6 +31,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(AR) -r $(NAME) $?
 	chmod 777 $(NAME)
+allc: all clean
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
 clean:
