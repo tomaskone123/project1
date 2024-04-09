@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:45:50 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/09 17:01:24 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/09 17:56:09 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		if (*pS1 != *pS2)
 			return (*pS1 - *pS2);
-		*pS1++;
-		*pS2++;
+		pS1++;
+		pS2++;
 	}
 	return (*pS1 - *pS2);
 }
