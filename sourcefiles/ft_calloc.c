@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/10 17:36:53 by tomas            ###   ########.fr       */
+/*   Created: 2024/04/10 17:23:45 by tomas             #+#    #+#             */
+/*   Updated: 2024/04/10 17:34:46 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
+#include <string.h>
 #include <stdlib.h>
+#include "libft.h"
 
-int	main(void)
+void *ft_calloc(size_t nmemb, size_t size)
 {
-	const char	c[] = "Hello world";
-	char *s = ft_strdup(c);
+	size_t	total;
+	unsigned char *byte;
+	void *ptr;
+	size_t i;
 
-	// memset(c, 'd', 8*sizeof(char));
-	printf("%s\n", s);
-	free (s);
-	return 0;
+	i = 0;
+	total = nmemb + size;
+	ptr = malloc(total);
+	if (ptr != NULL)
+	{
+		byte = (unsigned char *)ptr;
+		while (total > i)
+		{
+			byte[i] = 0;
+			i++;
+		}
+	}
+	return (ptr);
 }
