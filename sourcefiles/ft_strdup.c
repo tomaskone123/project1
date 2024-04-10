@@ -1,27 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/10 16:55:15 by tomas            ###   ########.fr       */
+/*   Created: 2024/04/10 16:11:55 by tomas             #+#    #+#             */
+/*   Updated: 2024/04/10 16:43:48 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 #include <stdio.h>
-#include <ctype.h>
 #include <stdlib.h>
 
-int	main(void)
+char *ft_strdup(const char *s)
 {
-	const char	c[] = "Hello world";
-	char *s = ft_strdup(c);
+	char *new;
+	char *cnew;
 
-	// memset(c, 'd', 8*sizeof(char));
-	printf("%s\n", s);
-	free (s);
-	return 0;
+	new = (char *)malloc(strlen(s) * (sizeof(char)));
+	if (new == NULL)
+		return NULL;
+	cnew = new;
+	while (*s)
+	{
+		*new = *s;
+		new++;
+		s++;
+	}
+	return (cnew);
 }
+
+// int main(void)
+// {
+// 	const char *s = "Hello world";
+// 	char *d = ft_strdup(s);
+
+// 	printf("%s\n", d);
+// 	return 0;
+// }
