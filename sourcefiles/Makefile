@@ -23,6 +23,7 @@ SOURCES = \
 	ft_calloc.c \
 	ft_strdup.c \
 	ft_strjoin.c \
+	ft_strtrim.c \
 
 
 
