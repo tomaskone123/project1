@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 12:15:53 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/11 12:43:21 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/11 13:36:47 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ char *ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	total;
 	char	*temp;
-	char	*new;
 
-	total = strlen(s1) + strlen(s2); // prepsat strlen
+	total = ft_strlen(s1) + ft_strlen(s2); // prepsat strlen
 	temp = (char *)malloc(total * sizeof(char));
 	if (temp == NULL)
 		return NULL;

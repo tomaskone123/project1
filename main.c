@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/10 17:36:53 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/11 13:39:36 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 
 int	main(void)
 {
-	const char	c[] = "Hello world";
-	char *s = ft_strdup(c);
+	const char *a = "maslo ";
+	const char *b = "world";
+	char *s = ft_strjoin(a, b);
 
-	// memset(c, 'd', 8*sizeof(char));
 	printf("%s\n", s);
 	free (s);
 	return 0;
