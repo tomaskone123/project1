@@ -24,5 +24,6 @@ void *ft_memchr(const void *s, int c, size_t n);
 int memcmp(const void *s1, const void *s2, size_t n);
 char *ft_strdup(const char *s);
 void *ft_calloc(size_t nmemb, size_t size);
+char *ft_strjoin(char const *s1, char const *s2);
 
 #endif
