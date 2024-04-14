@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/11 13:39:36 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/11 14:33:09 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-int	main(void)
+int main(void)
 {
-	const char *a = "maslo ";
-	const char *b = "world";
-	char *s = ft_strjoin(a, b);
+	const char *s = "aHello worlda";
+	const char *set = "H";
 
-	printf("%s\n", s);
-	free (s);
-	return 0;
+	char *new = ft_strtrim(s, set);
+
+	printf("%s\n", new);
+	return (0);
 }
