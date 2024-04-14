@@ -23,8 +23,11 @@ SOURCES = \
 	ft_calloc.c \
 	ft_strdup.c \
 	ft_strjoin.c \
+	ft_strtrim.c \
 
-
+MAKE = \
+	Makefile \
+	libft.h \
 
 
 OBJECTS = $(SOURCES:.c=.o)
@@ -33,6 +36,7 @@ CFLAGS = -Wall -Wextra -Werror
 CC = cc
 perms:
 	chmod 777 $(SOURCES)
+	chmod 777 $(MAKE)
 all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(AR) -r $(NAME) $?
