@@ -6,39 +6,50 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:31:14 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/14 14:40:05 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/23 17:34:48 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 char *ft_strtrim(char const *s1, char const *set)
 {
-	char	*temp;
-	size_t	i;
+    char    *tset;
+    char    *ts1;
+    size_t    i;
+    char    *end;
+    char    *endset;
 
-	i = ft_strlen(set);
-	temp = (char *)malloc((ft_strlen(s1) + 1) * sizeof(char)); //predelat strlen na ft_strlen
-	if (temp == NULL)
-		return (NULL);
-	while (*s1)
-	{
-		if ((*s1 == *set) && (i > 0))
-		{
-			s1++;
-			set++;
-			i--;
-		}
-		else if (*s1 != *set)
-		{
-			*temp = *s1;
-		}
-		s1++;
-
-	}
-	return (temp);
+    ts1 = (char *)malloc(strlen(s1) * sizeof(char) + 1);
+    tset = (char *)malloc(strlen(set) * sizeof(char) + 1);
+    strcpy(ts1, s1);
+    strcpy(tset, set);
+    i = strlen(set);
+    while ((*ts1 == *tset) && ((*tset++) == (*ts1++)))
+    {
+        if (*ts1 != *tset)
+            break;
+    }
+    endset = tset + strlen(tset);
+    end = ts1 + strlen(ts1);
+    while ((end > ts1) && (*end == *endset) && ((*end--) == (*endset--)))
+    {
+        if (*endset != *end)
+          break;
+		end++;
+		*end = 0;
+    }
+    return (end);
 }
 
+int main(void)
+{
+    const char *s = "xxxHello Worldxxx";
+    const char *c = "xxx";
+    char *r = ft_strtrim(s, c);
+    printf("%s\n", r);
+}

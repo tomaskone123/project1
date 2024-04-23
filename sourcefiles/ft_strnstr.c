@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:21:50 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/08 16:00:27 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/15 11:15:30 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	il = ft_strlen(little);
-	printf("%ld\n", il);
+	// printf("%ld\n", il);
 	if (*little == '\0')
 		return ((char *)big);
 	while (*big && (len != 0))
