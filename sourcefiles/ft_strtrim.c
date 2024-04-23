@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:31:14 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/23 17:34:48 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/23 17:48:53 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,21 @@ char *ft_strtrim(char const *s1, char const *set)
     }
     endset = tset + strlen(tset);
     end = ts1 + strlen(ts1);
-    while ((end > ts1) && (*end == *endset) && ((*end--) == (*endset--)))
+    while ((end > ts1) && (*end == *endset) && ((*end--) == (*endset--)) && (i != 0))
     {
         if (*endset != *end)
           break;
-		end++;
-		*end = 0;
+		i--;
     }
-    return (end);
+	end++;
+	*end = 0;
+    return (ts1);
 }
 
 int main(void)
 {
-    const char *s = "xxxHello Worldxxx";
-    const char *c = "xxx";
+    const char *s = "Hello world";
+    const char *c = "He";
     char *r = ft_strtrim(s, c);
     printf("%s\n", r);
 }
