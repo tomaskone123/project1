@@ -25,6 +25,7 @@ SOURCES = \
 	ft_strjoin.c \
 	ft_strtrim.c \
 	ft_strcpy.c \
+	ft_itoa.c \
 
 MAKE = \
 	Makefile \
