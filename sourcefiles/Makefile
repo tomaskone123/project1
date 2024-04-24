@@ -24,6 +24,7 @@ SOURCES = \
 	ft_strdup.c \
 	ft_strjoin.c \
 	ft_strtrim.c \
+	ft_strcpy.c \
 
 MAKE = \
 	Makefile \
