@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:31:14 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/24 17:02:57 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/24 19:15:29 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,41 +16,76 @@
 #include <stdio.h>
 #include <string.h>
 
+int getfirst(char const *s1, char const *set)
+{
+	int	i;
+	int	d;
+
+	i = 0;
+	d = ft_strlen(set) - 1;
+	while (s1[i] == set[i])
+	{
+		i++;
+		d--;
+	}
+	if (d >= 0)
+		i = 0;
+	return (i);
+}
+
+int getlast(char const *s1, char const *set)
+{
+	int	i;
+	int	c;
+	int	d;
+
+	i = ft_strlen(s1) - 1;
+	c = ft_strlen(set) - 1;
+	d = c;
+	while (s1[i] == set[c])
+	{
+		i--;
+		c--;
+		d--;
+	}
+	if (d >= 0)
+		i = ft_strlen(s1) - 1;
+	return (i);
+}
+
+int gettrimlen(const char *s1, const char *set)
+{
+	return (getlast(s1, set) - getfirst(s1, set));
+}
+
 char *ft_strtrim(char const *s1, char const *set)
 {
-    char    *tset;
-    char    *ts1;
-    size_t    i;
-    char    *end;
-    char    *endset;
+	char	*trim;
+	int		i;
+	int		len;
+	int		start;
 
-    ts1 = (char *)malloc(ft_strlen(s1) * sizeof(char) + 1);
-    tset = (char *)malloc(ft_strlen(set) * sizeof(char) + 1);
-    ft_strcpy(ts1, s1);
-    ft_strcpy(tset, set);
-    i = ft_strlen(set);
-    while ((*ts1 == *tset) && ((*tset++) == (*ts1++)))
-    {
-        if (*ts1 != *tset)
-            break;
-    }
-    endset = tset + ft_strlen(tset);
-    end = ts1 + ft_strlen(ts1);
-    while ((end > ts1) && (*end == *endset) && ((*end--) == (*endset--)) && (i != 0))
-    {
-        if (*endset != *end)
-          break;
-		i--;
-    }
-	end++;
-	*end = 0;
-    return (ts1);
+	if (s1 != NULL)
+	{
+		i = 0;
+		len = gettrimlen(s1, set) + 1;
+		trim = (char *)malloc(len);
+		start = getfirst(s1, set);
+		while (i < len)
+		{
+			trim[i] = s1[start];
+			i++;
+			start++;
+		}
+		trim[i] = 0;
+	}
+	return (trim);
 }
 
 // int main(void)
 // {
-//     const char *s = "Hello world";
-//     const char *c = "He";
+//     const char *s = "aa aaHaa aaaa";
+//     const char *c = "aaaa";
 //     char *r = ft_strtrim(s, c);
 //     printf("%s\n", r);
 // }
