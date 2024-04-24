@@ -9,8 +9,11 @@ OBJ = $(SRC:.c=.o)
 
 all: program
 
+perms:
+	chmod 777 $(SRC)
+
 program: $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^ -L$(LIB_DIR) -	lft
+	$(CC) $(CFLAGS) -o $@ $^ -L$(LIB_DIR) -lft
 	rm main.o
 
 %.o: %.c

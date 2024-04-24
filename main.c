@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/11 14:33:09 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/24 17:40:13 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 int main(void)
 {
-	const char *s = "aHello worlda";
-	const char *set = "H";
+	const char *s = "aa aaHello World aa aa";
+	const char *set = "aaaa";
 
 	char *new = ft_strtrim(s, set);
 
