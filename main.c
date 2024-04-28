@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/24 19:14:57 by tomas            ###   ########.fr       */
+/*   Updated: 2024/04/25 12:33:31 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@
 
 int main(void)
 {
-	const char *s = "aa aaHello World aaaa";
-	const char *set = "aaaa";
+	int		c;
+	char	*s;
 
-	char *new = ft_strtrim(s, set);
-
-	printf("%s\n", new);
+	c = -4321;
+	s = ft_itoa(c);
+	printf("%s\n", s);
+	free(s);
 	return (0);
 }
