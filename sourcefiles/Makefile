@@ -26,6 +26,8 @@ SOURCES = \
 	ft_strtrim.c \
 	ft_strcpy.c \
 	ft_itoa.c \
+	ft_strmapi.c \
+	f.c \
 
 MAKE = \
 	Makefile \
