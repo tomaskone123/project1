@@ -6,15 +6,14 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:45:09 by tomas             #+#    #+#             */
-/*   Updated: 2024/04/30 18:47:25 by tomas            ###   ########.fr       */
+/*   Updated: 2024/05/01 17:50:22 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-char f(unsigned int i, char s)
+void f(unsigned int i, char *s)
 {
-	printf("My inner function: index = %d and %c\n", i, s);
-	return s - 32;
+	s[i] = ft_toupper(s[i]);
 }

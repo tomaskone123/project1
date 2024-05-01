@@ -28,6 +28,8 @@ SOURCES = \
 	ft_itoa.c \
 	ft_strmapi.c \
 	f.c \
+	ft_striteri.c \
+	
 
 MAKE = \
 	Makefile \
