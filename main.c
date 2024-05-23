@@ -6,7 +6,7 @@
 /*   By: tomas <tomas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 17:55:46 by tomas             #+#    #+#             */
-/*   Updated: 2024/05/01 21:10:09 by tomas            ###   ########.fr       */
+/*   Updated: 2024/05/23 16:19:34 by tomas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ int main(void)
 	char str[] = "hello";
 	printf("The result is %s\n", str);
 	ft_striteri(str, f);
-	printf("The resoult is %s\n", str);
+	printf("The result is %s\n", str);
 	return 0;
 }

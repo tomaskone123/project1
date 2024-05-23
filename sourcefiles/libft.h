@@ -21,7 +21,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
 char *ft_strnstr(const char *big, const char *little, size_t len);
 int ft_atoi(const char *nptr);
 void *ft_memchr(const void *s, int c, size_t n);
-int memcmp(const void *s1, const void *s2, size_t n);
+int ft_memcmp(const void *s1, const void *s2, size_t n);
 char *ft_strdup(const char *s);
 void *ft_calloc(size_t nmemb, size_t size);
 char *ft_strjoin(char const *s1, char const *s2);
@@ -31,5 +31,8 @@ char *ft_itoa(int n);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void f(unsigned int i, char *s);
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
+char **ft_split(char const *s, char c);
+void ft_putchar_fd(char c, int fd);
+void ft_putstr_fd(char *s, int fd);
 
 #endif
